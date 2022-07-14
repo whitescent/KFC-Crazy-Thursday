@@ -1,5 +1,10 @@
 # KFC-Crazy-Thursday
+
 肯德基疯狂星期四段子收录
+
+查看自动生成的 [JSON](https://github.com/Nthily/KFC-Crazy-Thursday/blob/main/kfc.json) 文件，并通过 CDN 或 Github 自带的 [raw](https://raw.githubusercontent.com/Nthily/KFC-Crazy-Thursday/main/kfc.json) 来访问，最终部署到机器人等其他地方。
+
+以下是方便一次性快捷复制的文案。
 
 > 早上一过来努力写的代码，运行起来一直报错，找不到什么原因，不知道怎么解决，球球大佬帮我看下！以下是报错信息：java.io.IOException: KFC Crazy Thursday need 50$.
 
