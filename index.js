@@ -9,33 +9,32 @@ const {
 const owner = "Nthily";
 const repo = "KFC-Crazy-Thursday";
 
-
-var json = [];
+var jsonAry = [];
 var jsonStr = "";
 
 (async () => {
     try {
-        await axios
-        .get('https://raw.githubusercontent.com/Nthily/KFC-Crazy-Thursday/main/README.md')
-        .then(res => {
-            const content = res.data;
-            const regex = /(?<=^>)[\S\s]+?(?=---)/gm
-            var contentAry = content.match(regex)
-                .map(i => i.replace(/^\> */gm, ``));
-            contentAry.forEach(element => {
-                var data = {
-                    text: element.trim(" ")
-                }
-                json.push(data);
-            });
-            jsonStr = JSON.stringify(json, null, 2);
-        })
-        .catch(error => {
-            console.error(error);
-        });
+
         const octokit = new Octokit({
             auth: GH_TOKEN,
         });
+
+        const response = await octokit.rest.issues.listForRepo({
+            owner: owner,
+            repo: repo,
+            labels: "文案提供",
+            state: "all"
+        });
+
+        const issuesBody = response.data;
+        issuesBody.forEach(value => {
+            jsonAry.push({
+                text: value.body
+            });
+        })
+        jsonStr = JSON.stringify(jsonAry, null, 2);
+
+        console.log(jsonStr);
 
         const {
             data: { sha: jsonSha }

@@ -1,0 +1,19 @@
+name: Detect Issues Opened
+on:
+  issues:
+    types:
+      - opened
+      - labeled
+      
+jobs:
+  collect-text:
+    if: github.event.label.name == '文案提供'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - name: Setup
+        run: npm install
+      - name: run issues.js
+        run: node issues.js
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
