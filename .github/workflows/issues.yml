@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@main
       - name: Setup
         run: npm install
-      - name: run issues.js
-        run: node issues.js
+      - name: run index.js
+        run: node index.js
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
