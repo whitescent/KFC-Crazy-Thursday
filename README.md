@@ -2,11 +2,11 @@
 
 肯德基疯狂星期四段子收录
 
-你可以通过访问 [kfc-crazy-thursday.vercel.app/api/index](https://kfc-crazy-thursday.vercel.app/api/index) 来获取一句文案，也可以在底下随手复制一句发给你的好朋友们。
+你可以通过访问 [kfc-crazy-thursday.vercel.app/api/index](https://kfc-crazy-thursday.vercel.app/api/index) 来获取一句文案，也可以在 [issues](https://github.com/Nthily/KFC-Crazy-Thursday/issues?q=is%3Aissue+label%3A%E6%96%87%E6%A1%88%E6%8F%90%E4%BE%9B+) 区里面找到所有的文案。
 
-你可以在底下添加新的文案，但是要注意格式，通过 --- 分割，以及用 > 符号引用文字，最后需要以 --- 结尾。
+## 如何添加新的文案？
 
-以下是方便一次性快捷复制的文案：
+新建一个新的 [issues](https://github.com/Nthily/KFC-Crazy-Thursday/issues/new?assignees=&labels=%E6%96%87%E6%A1%88%E6%8F%90%E4%BE%9B&template=----.md&title=) 填写标题（随意）和文本即可。
 
 ---
 
