@@ -6,5 +6,4 @@
 
 ## 如何添加新的文案？
 
-新建一个新的 [issue](https://github.com/Nthily/KFC-Crazy-Thursday/issues/new?assignees=&labels=%E6%96%87%E6%A1%88%E6%8F%90%E4%BE%9B&template=----.md&title=) 填写标题（随意）和文本即可。
-
+新建一个新的 [issue](https://github.com/Nthily/KFC-Crazy-Thursday/issues/new) 填写标题（随意）和文本即可。
