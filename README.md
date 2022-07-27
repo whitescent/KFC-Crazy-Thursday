@@ -7,3 +7,7 @@
 ## 如何添加新的文案？
 
 新建一个新的 [issue](https://github.com/Nthily/KFC-Crazy-Thursday/issues/new) 填写标题（随意）和文本即可。
+
+## 协议 
+
+`MIT`
