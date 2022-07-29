@@ -19,22 +19,25 @@ var jsonStr = "";
             auth: GH_TOKEN,
         });
 
-        const response = await octokit.rest.issues.listForRepo({
-            owner: owner,
-            repo: repo,
-            labels: "文案提供",
-            state: "all"
-        });
-
-        const issuesBody = response.data;
-        issuesBody.forEach(value => {
-            jsonAry.push({
-                text: value.body
-            });
+        await octokit.paginate(`GET /repos/${owner}/${repo}/issues`, 
+            {   
+                owner: owner,
+                repo: repo,
+                labels: "文案提供",
+                state: 'all'
+            },
+            (response) => response.data.map((issue) => issue.body)
+        )
+        .then((issues) => {
+            issues.forEach((value, index) => {
+                jsonAry.push({
+                    index: index + 1,
+                    text: value
+                });
+            })
         })
-        jsonStr = JSON.stringify(jsonAry, null, 2);
 
-        console.log(jsonStr);
+        jsonStr = JSON.stringify(jsonAry, null, 2);
 
         const {
             data: { sha: jsonSha }
